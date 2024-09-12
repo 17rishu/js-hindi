@@ -97,6 +97,53 @@ const myCoding = [
     },
 ]
 
-myCoding.forEach((eachItem) => {
-    console.log(`${eachItem.lang} file extention is ${eachItem.langFileName}`)
-})
+// myCoding.forEach((eachItem) => {
+//     console.log(`${eachItem.lang} file extention is ${eachItem.langFileName}`)
+// })
+
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// const ans = myNums.forEach( (num) => {
+//     // console.log(num)
+//     return num > 4
+// } )        // forEach does'nt return any value
+
+// console.log(ans)
+
+
+const result = myNums.filter( (num) => num > 4)
+
+// console.log(result)
+
+
+const books = [
+    {
+        title: "Book One", genre: "Fiction", publish: 1992, edition: 2007
+    },
+    {
+        title: "Book Two", genre: "Non-Fiction", publish: 1997, edition: 2011
+    },
+    {
+        title: "Book Three", genre: "History", publish: 1990, edition: 2009
+    },
+    {
+        title: "Book Four", genre: "Sci-Fi", publish: 1996, edition: 2003
+    },
+    {
+        title: "Book Five", genre: "Fiction", publish: 1990, edition: 2000
+    },
+    {
+        title: "Book Six", genre: "Romantic", publish: 1999, edition: 2014
+    },
+    {
+        title: "Book Seven", genre: "Crime-triller", publish: 1998, edition: 2018
+    },
+    
+    {
+        title: "Book Eight", genre: "Non-Fiction", publish: 1994, edition: 2017
+    }
+]
+
+const myGenreBooks = books.filter( (book) => book.genre == "Fiction" )
+
+console.log(myGenreBooks)
