@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Closure aur Chai</title>
+</head>
+<body style="background-color: #313131;">
+
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+
+    <script>
+        // Lexical Scope 
+        // function outer(){
+        //     let username = 'rishabh'
+
+        //     console.log('Username:', username)
+
+        //     function innerOne(){
+        //         let isLogged = true
+        //         console.log(`Username from innerOne is : ${username}`)
+        //     }
+        //     innerOne()
+            
+        //     // console.log(isLogged)
+
+        //     function innerTwo(){
+        //         console.log(`Username from innerTwo is : ${username}`)
+        //     }
+        //     innerTwo()
+        // }
+
+        // outer()
+        // console.log(`Username from outer is : ${username}`)
+
+    </script>
+
+    <script>
+
+        // document.getElementById('orange').onclick = ()=>{
+        //     document.body.style.backgroundColor = 'orange'
+        // }
+        // document.getElementById('green').onclick = ()=>{
+        //     document.body.style.backgroundColor = 'green'
+        // }
+
+        // Closure
+        function handleClick(color){
+            // document.body.style.backgroundColor = `${color}`
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = handleClick('orange')
+        document.getElementById('green').onclick = handleClick('green')
+
+    </script>
+
+</body>
+</html>
